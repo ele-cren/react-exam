@@ -1,9 +1,9 @@
 import React from 'react'
 
-const PokemonCard = (props) => {
+const PokemonCard = ({ pokemon }) => {
     return (
         <div>
-            <h1>{ props.name }</h1>
+            <h1>{ pokemon.name }</h1>
         </div>
     )
 }
