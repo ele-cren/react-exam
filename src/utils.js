@@ -5,3 +5,10 @@ export const getPokemonIdFromUrl = (url) => {
   const id = split[split.length - 2]
   return id
 }
+
+export const capitalizeString = (str) => {
+  if (str && typeof(str) === 'string') {
+    return str.charAt(0).toUpperCase() + str.slice(1)
+  }
+  return str
+}

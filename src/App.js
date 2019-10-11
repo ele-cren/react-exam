@@ -1,9 +1,16 @@
 import React from 'react'
 import Pokedex from './containers/Pokedex'
+import Pokemon from './containers/Pokemon'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function App() {
   return (
-    <Pokedex />
+    <Router>
+      <Switch>
+        <Route path='/:pokemon' component={ Pokemon } />
+        <Route path='/' component={ Pokedex } />
+      </Switch> 
+    </Router>
   )
 }
 
