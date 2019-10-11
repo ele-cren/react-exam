@@ -14,8 +14,8 @@ const Pokemon = (props) => {
                 setLoading(true)
                 const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${ pokemon }`)
                 const data = await res.data
-                setData(data)
                 setLoading(false)
+                setData(data)
             } catch (error) {
                 setError(error)
                 throw error

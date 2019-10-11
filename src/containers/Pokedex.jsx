@@ -13,8 +13,8 @@ const Pokedex = () => {
                 setLoading(true)
                 const result = await axios.get('https://pokeapi.co/api/v2/pokemon/?limit=150')
                 const pokeData = await result.data
-                setData(pokeData)
                 setLoading(false)
+                setData(pokeData)
             } catch (error) {
                 setError(error)
                 throw error
@@ -22,7 +22,6 @@ const Pokedex = () => {
         }
         fetchData()
     }, [])
-
     return error ? error.message : isLoading ? 'Loading...' : <PokedexDisplay pokemons={ data.results } />
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
-const PokemonImg = () => {
-  return <h1>Img</h1>
+const PokemonImg = ({ name, url }) => {
+  return name && url ? <img alt={ name } src={ url } /> : ''
 }
 
 export default PokemonImg
