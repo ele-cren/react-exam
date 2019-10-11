@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import PokedexDisplay from '../components/PokedexDisplay'
+import Search from '../components/Search'
  
 const Pokedex = () => {
     const [isLoading, setLoading] = useState(false)
@@ -22,7 +23,13 @@ const Pokedex = () => {
         }
         fetchData()
     }, [])
-    return error ? error.message : isLoading ? 'Loading...' : <PokedexDisplay pokemons={ data.results } />
+    const pokedexElems = (
+        <div>
+            <Search />
+            <PokedexDisplay pokemons={ data.results } />
+        </div>
+    )
+    return error ? error.message : isLoading ? 'Loading...' : pokedexElems
 }
 
 export default Pokedex
