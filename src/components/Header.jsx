@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import BannerImg from '../assets/banner.png'
 
-const BaseHeader = styled.div`
+const BaseHeader = styled.header`
   background-color: #05A89F;
   width: 100%;
   height: 150px;
