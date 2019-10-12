@@ -5,6 +5,7 @@ import HeadingPokedex from '../components/HeadingPokedex'
 import Header from '../components/Header'
 //Helmet causes alert about componentWillMount.
 import Helmet from 'react-helmet'
+import Loader from '../components/Loader'
  
 const Pokedex = (props) => {
     const [isLoading, setLoading] = useState(false)
@@ -41,11 +42,15 @@ const Pokedex = (props) => {
                 <meta name="description" content="Pokedex" />
             </Helmet>
             <Header />
-            <HeadingPokedex search={ searchParam } setSearch={ handleChange } />
-            <PokemonsContainer search={ searchParam } pokemons={ data.results } />
+            { isLoading ? <Loader /> : (
+                <React.Fragment>
+                    <HeadingPokedex search={ searchParam } setSearch={ handleChange } />
+                    <PokemonsContainer search={ searchParam } pokemons={ data.results } />
+                </React.Fragment>
+            ) }
         </React.Fragment>
     )
-    return error ? error.message : isLoading ? 'Loading...' : pokedexElems
+    return error ? error.message : pokedexElems
 }
 
 export default Pokedex

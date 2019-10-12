@@ -5,6 +5,7 @@ import { capitalizeString } from '../utils'
 import Header from '../components/Header'
 //Helmet causes alert about componentWillMount.
 import Helmet from 'react-helmet'
+import Loader from '../components/Loader'
 
 const Pokemon = (props) => {
     const [isLoading, setLoading] = useState(false)
@@ -39,10 +40,10 @@ const Pokemon = (props) => {
                 <meta name="description" content={ capitalizedName } />
             </Helmet>
             <Header />
-            <PokemonContainer pokemon={ data } species={ species } />
+            { isLoading ? <Loader /> : <PokemonContainer pokemon={ data } species={ species } /> }
         </React.Fragment>
     )
-    return error ? error.message : isLoading ? 'Loading...' : pokemonElems
+    return error ? error.message : pokemonElems
 }
 
 export default Pokemon
