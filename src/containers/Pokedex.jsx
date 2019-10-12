@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import PokedexDisplay from '../components/PokedexDisplay'
+import PokemonsContainer from '../components/PokemonsContainer'
 import HeadingPokedex from '../components/HeadingPokedex'
 import Header from '../components/Header'
  
@@ -36,7 +36,7 @@ const Pokedex = (props) => {
         <React.Fragment>
             <Header />
             <HeadingPokedex search={ searchParam } setSearch={ handleChange } />
-            <PokedexDisplay search={ searchParam } pokemons={ data.results } />
+            <PokemonsContainer search={ searchParam } pokemons={ data.results } />
         </React.Fragment>
     )
     return error ? error.message : isLoading ? 'Loading...' : pokedexElems

@@ -1,21 +1,8 @@
 import React from 'react'
 import PokemonCard from './PokemonCard'
-import styled from 'styled-components'
+import { Container, PokedexContainer } from '../styles/components/_PokemonsContainer'
 
-const Container = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`
-
-const PokedexContainer = styled.div`
-  max-width: 1366px;
-  display: flex;
-  flex-wrap: wrap;
-`
-
-const PokedexDisplay = ({ pokemons, search }) => {
+const PokemonsContainer = ({ pokemons, search }) => {
   let cardList = ''
   if (pokemons) {
     cardList = pokemons.map((x, i) => {
@@ -31,4 +18,4 @@ const PokedexDisplay = ({ pokemons, search }) => {
   )
 }
 
-export default PokedexDisplay
+export default PokemonsContainer

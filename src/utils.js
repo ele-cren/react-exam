@@ -14,7 +14,7 @@ export const capitalizeString = (str) => {
 }
 
 export const idToString = (id) => {
-  if (id && typeof(id) === 'number') {
+  if (id) {
     return id < 10 ? `00${ id }` : id < 100 ? `0${ id }` : id
   }
   return id
