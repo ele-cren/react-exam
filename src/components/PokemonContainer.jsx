@@ -18,6 +18,17 @@ import {
 const PokemonContainer = ({ pokemon, species }) => {
   const { name, id, abilities, height, weight, stats, types } = pokemon
   const { flavor_text_entries } = species
+  
+  let pokemonText = ''
+  if (flavor_text_entries) {
+    for (const entry of flavor_text_entries) {
+      if (entry.language.name === 'en') {
+        pokemonText = entry.flavor_text
+        break
+      }
+    }
+  }
+
   return pokemon && flavor_text_entries ? (
     <Container>
       <Path>
@@ -28,7 +39,7 @@ const PokemonContainer = ({ pokemon, species }) => {
       </Path>
       <ImageTextContainer>
         <PokemonImg name={ name } url={ `${ FACE_IMG_URL }${ id }.png` } /><br />
-        <PokemonText text={ flavor_text_entries[1].flavor_text } />
+        <PokemonText text={ pokemonText } />
       </ImageTextContainer>
       <PokemonInfos abilities={ abilities } height={ height } weight={ weight } /><br />
       <PokemonStats stats={ stats } /><br />

@@ -32,7 +32,7 @@ const Input = styled.input`
 
 const PokedexTitle = styled.div`
   font-family: 'Playfair Display', serif;
-  margin: 0 5px 0 5px;
+  margin-left: 5px;
   font-size: 24px;
   @media(max-width: 435px) {
     font-size: 16px;

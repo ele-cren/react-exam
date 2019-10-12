@@ -3,6 +3,7 @@ import axios from 'axios'
 import PokemonsContainer from '../components/PokemonsContainer'
 import HeadingPokedex from '../components/HeadingPokedex'
 import Header from '../components/Header'
+import Helmet from 'react-helmet'
  
 const Pokedex = (props) => {
     const [isLoading, setLoading] = useState(false)
@@ -34,6 +35,10 @@ const Pokedex = (props) => {
 
     const pokedexElems = (
         <React.Fragment>
+            <Helmet>
+                <title>Pokedex</title>
+                <meta name="description" content="Pokedex" />
+            </Helmet>
             <Header />
             <HeadingPokedex search={ searchParam } setSearch={ handleChange } />
             <PokemonsContainer search={ searchParam } pokemons={ data.results } />

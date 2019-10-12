@@ -32,7 +32,7 @@ const PokemonId = styled(PokemonName)`
 const ImageTextContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  @media(max-width: 660px) {
+  @media(max-width: 670px) {
     flex-direction: column;
   }
 `

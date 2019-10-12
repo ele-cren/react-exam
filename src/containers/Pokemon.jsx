@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import PokemonContainer from '../components/PokemonContainer'
+import { capitalizeString } from '../utils'
 import Header from '../components/Header'
+import Helmet from 'react-helmet'
 
 const Pokemon = (props) => {
     const [isLoading, setLoading] = useState(false)
@@ -28,8 +30,13 @@ const Pokemon = (props) => {
         }
         fetchData()
     }, [pokemon])
+    const capitalizedName = capitalizeString(data.name)
     const pokemonElems = (
         <React.Fragment>
+            <Helmet>
+                <title>{ capitalizedName }</title>
+                <meta name="description" content={ capitalizedName } />
+            </Helmet>
             <Header />
             <PokemonContainer pokemon={ data } species={ species } />
         </React.Fragment>
