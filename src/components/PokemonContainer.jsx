@@ -12,7 +12,8 @@ import {
         PokedexPath,
         PathText,
         PokemonId, PokemonName,
-        ImageTextContainer
+        ImageTextContainer,
+        InfosStatsContainer
       } from '../styles/components/_PokemonContainer'
 
 const PokemonContainer = ({ pokemon, species }) => {
@@ -41,8 +42,10 @@ const PokemonContainer = ({ pokemon, species }) => {
         <PokemonImg name={ name } url={ `${ FACE_IMG_URL }${ id }.png` } /><br />
         <PokemonText text={ pokemonText } />
       </ImageTextContainer>
-      <PokemonInfos abilities={ abilities } height={ height } weight={ weight } /><br />
-      <PokemonStats stats={ stats } /><br />
+      <InfosStatsContainer>
+        <PokemonInfos abilities={ abilities } height={ height } weight={ weight } /><br />
+        <PokemonStats stats={ stats } /><br />
+      </InfosStatsContainer>
       <PokemonTypes types={ types } />
     </Container>
   ) : ''

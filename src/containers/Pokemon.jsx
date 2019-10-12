@@ -3,6 +3,7 @@ import axios from 'axios'
 import PokemonContainer from '../components/PokemonContainer'
 import { capitalizeString } from '../utils'
 import Header from '../components/Header'
+//Helmet causes alert about componentWillMount.
 import Helmet from 'react-helmet'
 
 const Pokemon = (props) => {

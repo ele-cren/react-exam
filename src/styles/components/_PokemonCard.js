@@ -13,7 +13,7 @@ const Card = styled.div`
     width: 170px;
     height: 170px;
     background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
     margin-bottom: 5px;
 `
 

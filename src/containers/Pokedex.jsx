@@ -3,6 +3,7 @@ import axios from 'axios'
 import PokemonsContainer from '../components/PokemonsContainer'
 import HeadingPokedex from '../components/HeadingPokedex'
 import Header from '../components/Header'
+//Helmet causes alert about componentWillMount.
 import Helmet from 'react-helmet'
  
 const Pokedex = (props) => {

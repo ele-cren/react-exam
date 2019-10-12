@@ -19,3 +19,15 @@ export const idToString = (id) => {
   }
   return id
 }
+
+export const removeMinusStr = (str) => {
+  if (str && typeof(str) === 'string') {
+    const split = str.split('-')
+    let newString = []
+    split.forEach(x => {
+      newString = [...newString, capitalizeString(x)]
+    })
+    return newString.join(' ')
+  }
+  return str
+}

@@ -37,4 +37,12 @@ const ImageTextContainer = styled.div`
   }
 `
 
-export { Container, ImageTextContainer, Path, PathText, PokedexPath, PokemonName, PokemonId }
+const InfosStatsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  @media(max-width: 630px) {
+    flex-direction: column;
+  }
+`
+
+export { Container, InfosStatsContainer, ImageTextContainer, Path, PathText, PokedexPath, PokemonName, PokemonId }

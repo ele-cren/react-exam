@@ -64,7 +64,7 @@ const typesStyles = {
     color: '#fff'
   },
   dragon: {
-    backgroundColor: 'linear-gradient(180deg, #53a4cf 50%, #f16e57 50%)',
+    background: 'linear-gradient(180deg, #53a4cf 50%, #f16e57 50%)',
     color: '#fff'
   }
 }
