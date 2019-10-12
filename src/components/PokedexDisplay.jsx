@@ -2,12 +2,17 @@ import React from 'react'
 import PokemonCard from './PokemonCard'
 import styled from 'styled-components'
 
-const PokedexContainer = styled.div`
+const Container = styled.div`
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    border: 1px solid black;
-    max-width: 1366px;
-    margin: auto;
+    flex-direction: column;
+    align-items: center;
+`
+
+const PokedexContainer = styled.div`
+  max-width: 1366px;
+  display: flex;
+  flex-wrap: wrap;
 `
 
 const PokedexDisplay = ({ pokemons, search }) => {
@@ -18,9 +23,11 @@ const PokedexDisplay = ({ pokemons, search }) => {
     })
   }
   return (
-    <PokedexContainer>
-      { cardList }
-    </PokedexContainer>
+    <Container>
+      <PokedexContainer>
+        { cardList }
+      </PokedexContainer>
+    </Container>
   )
 }
 

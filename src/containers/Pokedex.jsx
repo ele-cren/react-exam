@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import PokedexDisplay from '../components/PokedexDisplay'
-import Search from '../components/Search'
+import HeadingPokedex from '../components/HeadingPokedex'
 import Header from '../components/Header'
  
 const Pokedex = (props) => {
@@ -35,7 +35,7 @@ const Pokedex = (props) => {
     const pokedexElems = (
         <React.Fragment>
             <Header />
-            <Search search={ searchParam } setSearch={ handleChange } />
+            <HeadingPokedex search={ searchParam } setSearch={ handleChange } />
             <PokedexDisplay search={ searchParam } pokemons={ data.results } />
         </React.Fragment>
     )
