@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import PokedexDisplay from '../components/PokedexDisplay'
 import Search from '../components/Search'
+import Header from '../components/Header'
  
 const Pokedex = (props) => {
     const [isLoading, setLoading] = useState(false)
     const [data, setData] = useState({})
     const [error, setError] = useState(null)
     const urlParams = new URLSearchParams(props.location.search)
-    const searchParam = urlParams.get('search')
+    const searchParam = urlParams.get('search') || ''
 
     useEffect(() => {
         const fetchData = async () => {
@@ -32,10 +33,11 @@ const Pokedex = (props) => {
     }
 
     const pokedexElems = (
-        <div>
+        <React.Fragment>
+            <Header />
             <Search search={ searchParam } setSearch={ handleChange } />
             <PokedexDisplay search={ searchParam } pokemons={ data.results } />
-        </div>
+        </React.Fragment>
     )
     return error ? error.message : isLoading ? 'Loading...' : pokedexElems
 }
