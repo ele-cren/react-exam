@@ -10,11 +10,11 @@ const PokedexContainer = styled.div`
     margin: auto;
 `
 
-const PokedexDisplay = ({ pokemons }) => {
+const PokedexDisplay = ({ pokemons, search }) => {
   let cardList = ''
   if (pokemons) {
     cardList = pokemons.map((x, i) => {
-      return <PokemonCard key={ i } pokemon={ x } />
+      return x.name.toLowerCase().includes(search.toLowerCase()) ? <PokemonCard key={ i } pokemon={ x } /> : ''
     })
   }
   return (
