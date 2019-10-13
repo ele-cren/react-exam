@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Message } from '../styles/components/_MyInfo'
+import { Container, Message } from './style'
 import PropTypes from 'prop-types'
 
 const MyInfo = ({ message }) => {

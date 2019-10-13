@@ -1,6 +1,6 @@
 import React from 'react'
-import { removeMinusStr } from '../utils'
-import { Container, Info, InfoTitle, AbilitiesContainer, Ability } from '../styles/components/_PokemonInfos'
+import { removeMinusStr } from '../../utils'
+import { Container, Info, InfoTitle, AbilitiesContainer, Ability } from './style'
 
 const PokemonInfos = ({ height, weight, abilities, moves }) => {
   if (height && weight && abilities) {

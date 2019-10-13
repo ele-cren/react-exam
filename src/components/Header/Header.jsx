@@ -1,5 +1,5 @@
 import React from 'react'
-import { BaseHeader, Banner } from '../styles/components/_Header'
+import { BaseHeader, Banner } from './style'
 
 const Header = () => {
   return (

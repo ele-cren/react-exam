@@ -1,4 +1,4 @@
-const _types = {
+const typesStyles = {
   grass: {
     backgroundColor: '#9bcc50',
     color: '#212121'
@@ -69,4 +69,4 @@ const _types = {
   }
 }
 
-export default _types
+export default typesStyles

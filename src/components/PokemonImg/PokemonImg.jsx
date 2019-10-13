@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImageContainer, Image } from '../styles/components/_PokemonImg'
+import { ImageContainer, Image } from './style'
 
 const PokemonImg = ({ name, url }) => {
   const pokemonImg = (

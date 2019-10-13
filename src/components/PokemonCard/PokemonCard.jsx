@@ -1,7 +1,7 @@
 import React from 'react'
-import { getPokemonIdFromUrl, FACE_IMG_URL, idToString, capitalizeString } from '../utils'
+import { getPokemonIdFromUrl, FACE_IMG_URL, idToString, capitalizeString } from '../../utils'
 import { Link } from 'react-router-dom'
-import { Card, CardContainer, Image, PokemonId, PokemonName } from '../styles/components/_PokemonCard'
+import { Card, CardContainer, Image, PokemonId, PokemonName } from './style'
 import PropTypes from 'prop-types'
 
 const PokemonCard = ({ pokemon }) => {

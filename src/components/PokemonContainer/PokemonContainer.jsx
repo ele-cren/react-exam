@@ -1,10 +1,10 @@
 import React from 'react'
-import { capitalizeString, FACE_IMG_URL, idToString } from '../utils'
-import PokemonImg from './PokemonImg'
-import PokemonInfos from './PokemonInfos'
-import PokemonStats from './PokemonStats'
-import PokemonTypes from '././PokemonTypes'
-import PokemonText from './PokemonText'
+import { capitalizeString, FACE_IMG_URL, idToString } from '../../utils'
+import PokemonImg from '../PokemonImg/PokemonImg'
+import PokemonInfos from '../PokemonInfos/PokemonInfos'
+import PokemonStats from '../PokemonStats/PokemonStats'
+import PokemonTypes from '../PokemonTypes/PokemonTypes'
+import PokemonText from '../PokemonText/PokemonText'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import {
@@ -15,7 +15,7 @@ import {
   PokemonId, PokemonName,
   ImageTextContainer,
   InfosStatsContainer
-} from '../styles/components/_PokemonContainer'
+} from './style'
 
 const PokemonContainer = ({ pokemon, species }) => {
   const { name, id, abilities, height, weight, stats, types, moves } = pokemon

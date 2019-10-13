@@ -1,6 +1,6 @@
 import React from 'react'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { Container, HeadingContainer, PokedexTitle, Form, SearchIcon, Input } from '../styles/components/_HeadingPokedex'
+import { Container, HeadingContainer, PokedexTitle, Form, SearchIcon, Input } from './style'
 import PropTypes from 'prop-types'
 
 const HeadingPokedex = ({ search, setSearch }) => {

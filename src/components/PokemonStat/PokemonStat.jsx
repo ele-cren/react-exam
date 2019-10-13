@@ -1,5 +1,5 @@
 import React from 'react'
-import { BarContainer, Name, CompleteBar, StatBar } from '../styles/components/_PokemonStat'
+import { BarContainer, Name, CompleteBar, StatBar } from './style'
 import PropTypes from 'prop-types'
 
 const PokemonStat = ({ base, name }) => {

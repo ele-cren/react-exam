@@ -1,12 +1,12 @@
 import React from 'react'
-import _types from '../styles/_types'
-import { capitalizeString } from '../utils'
-import { TypesContainer, TypeDiv, Container, TypeTitle } from '../styles/components/_PokemonTypes'
+import typesStyles from './typesStyles'
+import { capitalizeString } from '../../utils'
+import { TypesContainer, TypeDiv, Container, TypeTitle } from './style'
 
 const PokemonTypes = ({ types }) => {
   if (types) {
     const typesList = types.map((x, i) => {
-      return <TypeDiv key={i} style={_types[x.type.name]}>{capitalizeString(x.type.name)}</TypeDiv>
+      return <TypeDiv key={i} style={typesStyles[x.type.name]}>{capitalizeString(x.type.name)}</TypeDiv>
     })
     return (
       <Container>

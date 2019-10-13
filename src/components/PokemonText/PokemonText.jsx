@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from '../styles/components/_PokemonText'
+import { Text } from './style'
 import PropTypes from 'prop-types'
 
 const PokemonText = ({ text }) => {

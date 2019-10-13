@@ -1,7 +1,7 @@
 import React from 'react'
-import PokemonStat from './PokemonStat'
-import { removeMinusStr } from '../utils'
-import { StatsContainer, Title } from '../styles/components/_PokemonStats'
+import PokemonStat from '../PokemonStat/PokemonStat'
+import { removeMinusStr } from '../../utils'
+import { StatsContainer, Title } from './style'
 
 const PokemonStats = ({ stats }) => {
   if (stats) {
