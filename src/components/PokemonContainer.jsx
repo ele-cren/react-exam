@@ -17,7 +17,7 @@ import {
       } from '../styles/components/_PokemonContainer'
 
 const PokemonContainer = ({ pokemon, species }) => {
-  const { name, id, abilities, height, weight, stats, types } = pokemon
+  const { name, id, abilities, height, weight, stats, types, moves } = pokemon
   const { flavor_text_entries } = species
   
   let pokemonText = ''
@@ -43,7 +43,7 @@ const PokemonContainer = ({ pokemon, species }) => {
         <PokemonText text={ pokemonText } />
       </ImageTextContainer>
       <InfosStatsContainer>
-        <PokemonInfos abilities={ abilities } height={ height } weight={ weight } /><br />
+        <PokemonInfos moves={ moves } abilities={ abilities } height={ height } weight={ weight } /><br />
         <PokemonStats stats={ stats } /><br />
       </InfosStatsContainer>
       <PokemonTypes types={ types } />

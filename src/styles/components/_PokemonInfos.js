@@ -4,8 +4,11 @@ const Container = styled.div`
   background-color: rgba(100, 207, 145, 0.2);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
   margin: 10px 0 0 5px;
-  width: 240px;
+  width: 450px;
   padding: 5px 0 15px 0;
+  @media(max-width: 840px) {
+    width: 300px;
+  }
 `
 
 const InfoTitle = styled.div`

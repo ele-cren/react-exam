@@ -40,7 +40,7 @@ const ImageTextContainer = styled.div`
 const InfosStatsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  @media(max-width: 630px) {
+  @media(max-width: 690px) {
     flex-direction: column;
   }
 `

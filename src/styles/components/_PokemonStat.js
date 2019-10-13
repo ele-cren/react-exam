@@ -5,7 +5,7 @@ const CompleteBar = styled.div`
   width: 220px;
   background-color: rgba(0, 0, 0, 0.1);
   margin-right: 10px;
-  @media(max-width: 630px) {
+  @media(max-width: 690px) {
     width: 150px;
   }
 `
@@ -13,7 +13,7 @@ const CompleteBar = styled.div`
 const StatBar = styled(CompleteBar)`
   width: ${ props => props.base }%;
   background-color: #64CF91;
-  @media(max-width: 630px) {
+  @media(max-width: 690px) {
     width: ${ props => props.base }%;
   }
 `
