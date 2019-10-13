@@ -5,7 +5,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: ${props => props.background ? 'rgba(56, 188, 155, 0.2)' : 'inherit'};
+    background-color: rgba(56, 188, 155, 0.2);
     margin-top: 10px;
 `
 

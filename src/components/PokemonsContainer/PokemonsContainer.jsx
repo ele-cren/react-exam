@@ -13,11 +13,13 @@ const PokemonsContainer = ({ pokemons, search }) => {
     })
   }
   return (
-    <Container background={cardList.length > 0}>
-      <PokedexContainer>
-        {(cardList.length > 0 || !pokemons) ? cardList : <MyInfo message='There are no pokémon to display.' />}
-      </PokedexContainer>
-    </Container>
+    cardList.length === 0 && pokemons ? <MyInfo message='There are no pokémon to display.' /> : (
+      <Container>
+        <PokedexContainer>
+          {cardList}
+        </PokedexContainer>
+      </Container>
+    )
   )
 }
 
