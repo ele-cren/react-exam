@@ -1,3 +1,4 @@
+// Official styles from pokemon.com
 const typesStyles = {
   grass: {
     backgroundColor: '#9bcc50',
@@ -65,6 +66,10 @@ const typesStyles = {
   },
   dragon: {
     background: 'linear-gradient(180deg, #53a4cf 50%, #f16e57 50%)',
+    color: '#fff'
+  },
+  dark: {
+    backgroundColor: '#707070',
     color: '#fff'
   }
 }
