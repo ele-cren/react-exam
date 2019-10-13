@@ -6,7 +6,7 @@ const StatsContainer = styled.div`
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
   @media(max-width: 690px) {
     margin: 0 0 0 5px;
-    max-width: 295px;
+    max-width: 300px;
   }
 `
 
