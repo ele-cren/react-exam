@@ -4,7 +4,7 @@ import { ImageContainer, Image } from '../styles/components/_PokemonImg'
 const PokemonImg = ({ name, url }) => {
   const pokemonImg = (
     <ImageContainer>
-      <Image alt={ name } src={ url } />
+      <Image alt={name} src={url} />
     </ImageContainer>
   )
   return name && url ? pokemonImg : ''

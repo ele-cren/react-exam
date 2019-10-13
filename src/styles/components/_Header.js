@@ -11,7 +11,7 @@ export const BaseHeader = styled.header`
 `
 
 export const Banner = styled.div`
-  background-image: url(${ BannerImg });
+  background-image: url(${BannerImg});
   background-position: center;
   width: 1366px;
   height: 100%;

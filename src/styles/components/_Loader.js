@@ -9,7 +9,7 @@ const rotate = keyframes`
   to {
     transform: rotate(360deg);
   }
-`;
+`
 
 const Container = styled.div`
   width: 100%;
@@ -21,10 +21,10 @@ const Container = styled.div`
 const Pokedex = styled.div`
   width: 50px;
   height: 50px;
-  background-image: url(${ PokedexImg });
+  background-image: url(${PokedexImg});
   background-position: center;
   background-size: cover;
-  animation: ${ rotate } 1s linear infinite;
+  animation: ${rotate} 1s linear infinite;
 `
 
 export { Container, Pokedex }

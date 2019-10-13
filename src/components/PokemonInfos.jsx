@@ -7,7 +7,7 @@ const PokemonInfos = ({ height, weight, abilities, moves }) => {
     const abilitiesList = abilities.map((x, i) => {
       const abilityName = removeMinusStr(x.ability.name)
       const ability = (
-        <Ability key={ i }>{ i === abilities.length - 1 ? abilityName : `${ abilityName }, ` }</Ability>
+        <Ability key={i}>{i === abilities.length - 1 ? abilityName : `${abilityName}, `}</Ability>
       )
       return ability
     })
@@ -15,7 +15,7 @@ const PokemonInfos = ({ height, weight, abilities, moves }) => {
     const movesList = restrictedMoves.map((x, i) => {
       const moveName = removeMinusStr(x.move.name)
       const move = (
-        <Ability key={ i }>{ i === restrictedMoves.length - 1 ? moveName : `${ moveName }, ` }</Ability>
+        <Ability key={i}>{i === restrictedMoves.length - 1 ? moveName : `${moveName}, `}</Ability>
       )
       return move
     })
@@ -23,19 +23,19 @@ const PokemonInfos = ({ height, weight, abilities, moves }) => {
       <Container>
         <div>
           <InfoTitle>Height</InfoTitle>
-          <Info>{ height * 10 } cm</Info>
+          <Info>{height * 10} cm</Info>
         </div>
         <div>
           <InfoTitle>Weight</InfoTitle>
-          <Info>{ weight / 10 } kg</Info>
+          <Info>{weight / 10} kg</Info>
         </div>
         <div>
           <InfoTitle>Abilities</InfoTitle>
-          <AbilitiesContainer>{ abilitiesList }</AbilitiesContainer>
+          <AbilitiesContainer>{abilitiesList}</AbilitiesContainer>
         </div>
         <div>
           <InfoTitle>Moves</InfoTitle>
-          <AbilitiesContainer>{ movesList }</AbilitiesContainer>
+          <AbilitiesContainer>{movesList}</AbilitiesContainer>
         </div>
       </Container>
     )

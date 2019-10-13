@@ -7,7 +7,7 @@ export const getPokemonIdFromUrl = (url) => {
 }
 
 export const capitalizeString = (str) => {
-  if (str && typeof(str) === 'string') {
+  if (str && typeof (str) === 'string') {
     return str.charAt(0).toUpperCase() + str.slice(1)
   }
   return str
@@ -15,13 +15,13 @@ export const capitalizeString = (str) => {
 
 export const idToString = (id) => {
   if (id) {
-    return id < 10 ? `00${ id }` : id < 100 ? `0${ id }` : id
+    return id < 10 ? `00${id}` : id < 100 ? `0${id}` : id
   }
   return id
 }
 
 export const removeMinusStr = (str) => {
-  if (str && typeof(str) === 'string') {
+  if (str && typeof (str) === 'string') {
     const split = str.split('-')
     let newString = []
     split.forEach(x => {

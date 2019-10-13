@@ -3,15 +3,15 @@ import Pokedex from './containers/Pokedex'
 import Pokemon from './containers/Pokemon'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path='/:pokemon' component={ Pokemon } />
-        <Route path='/' component={ Pokedex } />
-      </Switch> 
+        <Route path='/:pokemon' component={Pokemon} />
+        <Route path='/' component={Pokedex} />
+      </Switch>
     </Router>
   )
 }
 
-export default App;
+export default App

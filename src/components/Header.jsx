@@ -4,7 +4,7 @@ import { BaseHeader, Banner } from '../styles/components/_Header'
 const Header = () => {
   return (
     <BaseHeader>
-      <Banner></Banner>
+      <Banner />
     </BaseHeader>
   )
 }
