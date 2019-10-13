@@ -7,7 +7,7 @@ const HeadingPokedex = ({ search, setSearch }) => {
   return (
     <Container>
       <HeadingContainer>
-        <PokedexTitle>Pokedex</PokedexTitle>
+        <PokedexTitle>Pokédex</PokedexTitle>
         <Form onSubmit={(e) => e.preventDefault()}>
           <SearchIcon icon={faSearch} />
           <Input type='text' name='search' value={search} onChange={setSearch} />

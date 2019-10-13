@@ -47,8 +47,8 @@ const Pokedex = ({ location, history }) => {
   return (
     <>
       <Helmet>
-        <title>Pokedex</title>
-        <meta name='description' content='Pokedex' />
+        <title>Pokédex</title>
+        <meta name='description' content='Pokédex' />
       </Helmet>
       <Header />
       {error ? <MyError message={error.message} /> : pokedexElems}

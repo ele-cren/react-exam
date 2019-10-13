@@ -33,7 +33,7 @@ const PokemonContainer = ({ pokemon, species }) => {
   return pokemon && flavorTextEntries ? (
     <Container>
       <Path>
-        <Link to='/' style={{ textDecoration: 'none' }}><PokedexPath>Pokedex</PokedexPath></Link>
+        <Link to='/' style={{ textDecoration: 'none' }}><PokedexPath>Pokédex</PokedexPath></Link>
         <PathText> / </PathText>
         <PokemonName>{capitalizeString(name)}</PokemonName>
         <PokemonId>#{idToString(id)}</PokemonId>
