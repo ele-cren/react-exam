@@ -2,12 +2,9 @@ import styled from 'styled-components'
 
 const CompleteBar = styled.div`
   height: 20px;
-  width: 220px;
+  flex-grow: 1;
   background-color: rgba(0, 0, 0, 0.1);
   margin-right: 10px;
-  @media(max-width: 690px) {
-    width: 150px;
-  }
 `
 
 const StatBar = styled(CompleteBar)`
@@ -21,11 +18,18 @@ const StatBar = styled(CompleteBar)`
 const BarContainer = styled.div`
   display: flex;
   margin: 10px 0 10px 0;
+  width: 400px;
+  @media(max-width: 885px) {
+    width: 350px;
+  }
+  @media(max-width: 690px) {
+    width: 300px;
+  }
 `
 
 const Name = styled.div`
   font-size: 16px;
-  width: 115px;
+  width: 120px;
   margin-left: 10px;
 `
 
