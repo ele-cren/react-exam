@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
   width: 1366px;
@@ -13,4 +14,11 @@ export const Message = styled.div`
   padding: 10px 5px 10px 5px;
   border-radius: 2px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+`
+
+export const HomeLink = styled(Link)`
+  text-decoration: none;
+  color: #5e0000;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #5e0000;
 `

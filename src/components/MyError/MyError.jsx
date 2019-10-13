@@ -1,11 +1,11 @@
 import React from 'react'
-import { Container, Message } from './style'
+import { Container, Message, HomeLink } from './style'
 import PropTypes from 'prop-types'
 
 const MyError = ({ message }) => {
   return (
     <Container>
-      <Message>{message}. The pokémon you are looking for may not exist.</Message>
+      <Message>{message}<br />Go back to <HomeLink to='/'>Home</HomeLink></Message>
     </Container>
   )
 }
