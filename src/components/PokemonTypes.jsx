@@ -1,5 +1,5 @@
 import React from 'react'
-import typesStyles from '../typesStyles'
+import typesStyles from '../styles/typesStyles'
 import { capitalizeString } from '../utils'
 import { TypesContainer, TypeDiv, Container, TypeTitle } from '../styles/components/_PokemonTypes'
 

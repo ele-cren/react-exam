@@ -3,9 +3,10 @@ import axios from 'axios'
 import PokemonContainer from '../components/PokemonContainer'
 import { capitalizeString } from '../utils'
 import Header from '../components/Header'
+import Loader from '../components/Loader'
+import MyError from '../components/MyError'
 //Helmet causes alert about componentWillMount.
 import Helmet from 'react-helmet'
-import Loader from '../components/Loader'
 
 const Pokemon = (props) => {
     const [isLoading, setLoading] = useState(false)
@@ -33,17 +34,17 @@ const Pokemon = (props) => {
         fetchData()
     }, [pokemon])
     const capitalizedName = capitalizeString(data.name)
-    const pokemonElems = (
+    const pokemonElems = isLoading ? <Loader /> : <PokemonContainer pokemon={ data } species={ species } />
+    return (
         <React.Fragment>
             <Helmet>
                 <title>{ capitalizedName }</title>
                 <meta name="description" content={ capitalizedName } />
             </Helmet>
             <Header />
-            { isLoading ? <Loader /> : <PokemonContainer pokemon={ data } species={ species } /> }
-        </React.Fragment>
+            { error ? <MyError message={ error.message } /> : pokemonElems }
+        </React.Fragment>   
     )
-    return error ? error.message : pokemonElems
 }
 
 export default Pokemon
