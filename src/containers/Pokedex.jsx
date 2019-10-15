@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import PokemonsContainer from '../components/PokemonsContainer/PokemonsContainer'
 import HeadingPokedex from '../components/HeadingPokedex/HeadingPokedex'
-import Header from '../components/Header/Header'
 import Loader from '../components/Loader/Loader'
 import MyError from '../components/MyError/MyError'
 // Helmet causes warning about componentWillMount.
@@ -50,7 +49,6 @@ const Pokedex = ({ location, history }) => {
         <title>Pokédex</title>
         <meta name='description' content='Pokédex' />
       </Helmet>
-      <Header />
       {error ? <MyError message={error.message} /> : pokedexElems}
     </>
   )

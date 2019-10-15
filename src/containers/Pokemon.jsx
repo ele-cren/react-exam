@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import PokemonContainer from '../components/PokemonContainer/PokemonContainer'
 import { capitalizeString } from '../utils'
-import Header from '../components/Header/Header'
 import Loader from '../components/Loader/Loader'
 import MyError from '../components/MyError/MyError'
 // Helmet causes warning about componentWillMount.
@@ -44,7 +43,6 @@ const Pokemon = ({ match }) => {
         <title>{capitalizedName}</title>
         <meta name='description' content={capitalizedName} />
       </Helmet>
-      <Header />
       {error ? <MyError message={error.message} /> : pokemonElems}
     </>
   )
